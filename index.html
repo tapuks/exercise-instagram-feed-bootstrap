@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous">
+    </script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">  
+</head>
+<body class="bg-light">
+    
+    <!-- Menu de navegacion -->
+    <nav class="navbar navbar-light bg-light mx-2 mx-sm-2 mx-md-2  mx-lg-5">
+        <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg " width="16" height="16" fill="currentColor"
+                    class="bi bi-instagram img-insta" viewBox="0 0 16 16">
+                    <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+                <span class="fst-italic title">Instagram</span>
+        </div>
+        <div class="actions d-flex justify-content-center">
+            <!-- BOTON MODAL -->
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal"data-bs-target="#exampleModal">
+                Create a new post
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea"></label>
+                        </div>
+                        <div class="modal-body">
+                        
+                        <button type="button" class="btn btn-outline-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                        </button>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown">
+                <a class="dropdown-toggle  dropdown-item" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="navbarDropdown" width="16" height="16"
+                            fill="currentColor" class="bi bi-gear-fill tuerca" viewBox="0 0 16 16">
+                            <path
+                                    d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                        </svg>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Long out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Botones NAV-PILLS -->
+    <div class="menu-button bg-white">
+        <div class="container d-flex justify-content-center">
+            <ul class="nav nav-pills"> 
+                <div class="mx-2 ">
+                    <a type="button" class="btn btn-secondary" href="#scroll" data-toggle="tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+                            </svg>
+                    </a>
+                    <a type="button" class="btn btn-secondary" href="#profile" data-toggle="tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/></svg>
+                    </a> 
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tab-content clearfix">
+            <div class="tab-pane fade show " id="profile" role="tabpanel" >
+                <!--PHOTO 1 -->
+                <div class="container photos photo1">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">01/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://www.ecestaticos.com/image/clipping/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 2 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>       
+                <!-- PHOTO 3 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 4 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 5 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2016/03/27/21/16/pet-1284307_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 6 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2016/02/11/17/00/dog-1194087_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 7 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.redcanina.es/wp-content/uploads/2018/12/27225856/perro-peque%C3%B1o-750x375.png" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 8 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 9 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn-3.expansion.mx/dims4/default/9a6df8a/2147483647/strip/true/crop/620x326+0+79/resize/1200x630!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2016%2F03%2F08%2F1a.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 10 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src=https://okdiario.com/img/2019/10/13/como-es-el-bulldog-ingles-1.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 11 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://i.pinimg.com/originals/f8/c7/8a/f8c78a7c1fcb9fdce7263f5bd192c434.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 12 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2017/09/25/13/11/dog-2785066_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 13 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2017/10/02/21/56/dog-2810484_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2 "></div>
+                    </section>
+                </div>
+                <!-- PHOTO 14 -->
+                <div class="container photos">
+                    <section class="row">
+                        <!-- COL LEFT -->
+                        <div class="col-sm-2"></div>
+                        <!-- COL CENTER -->
+                        <div class="col-sm-8">
+                            <div class="card" style="width: 100%">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between"">
+                                        <span class="fw-bold">My first photo</span>
+                                        <span class="text-secondary">02/14</span>
+                                    </div>
+                                  </div>
+                                <img src="https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785077_960_720.jpg" alt="">
+                                <div class="card-body">
+                                  <p class="card-text">This is my first photo with 4Geeks.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- COL RIGTH -->
+                        <div class="col-sm-2"></div>
+                    </section>
+                </div>
+            </div>
+        
+            <!-- MULIPHOTOS -->
+            <div class="tab-pane fade show active" id="scroll" role="tabpanel" > 
+                <!-- COLUMN 1 -->
+                <section class="row">
+                    <div class="col-sm-4 p-1">
+                        <img src="https://www.ecestaticos.com/image/clipping/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_960_720.jpg" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_960_720.jpg" alt="" >
+                    </div>
+                </section>
+                <!-- COLUMN 2 -->
+                <section class="row">
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg" alt="" height="300px">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/27/21/16/pet-1284307_960_720.jpg" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2016/02/11/17/00/dog-1194087_960_720.jpg" alt="">
+                    </div>
+                </section>
+                <!-- COLUMN 3 -->
+                <section class="row">
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.redcanina.es/wp-content/uploads/2018/12/27225856/perro-peque%C3%B1o-750x375.png" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_960_720.jpg" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn-3.expansion.mx/dims4/default/9a6df8a/2147483647/strip/true/crop/620x326+0+79/resize/1200x630!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2016%2F03%2F08%2F1a.jpg" alt="">
+                    </div>
+                </section>
+                <!-- COLUMN 4 -->
+                <section class="row">
+                    <div class="col-sm-4 p-1">
+                        <img src="https://okdiario.com/img/2019/10/13/como-es-el-bulldog-ingles-1.jpg" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://i.pinimg.com/originals/f8/c7/8a/f8c78a7c1fcb9fdce7263f5bd192c434.jpg" alt="">
+                    </div>
+                    <div class="col-sm-4 p-1">
+                        <img src="https://cdn.pixabay.com/photo/2017/09/25/13/11/dog-2785066_960_720.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>       
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

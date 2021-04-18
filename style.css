@@ -1,0 +1,41 @@
+
+.menu-button  {
+    padding:5px
+}
+.margin {
+    height: 50px;
+}
+.photos {
+    margin-bottom: 20px;
+}
+.photo1 {
+    margin-top:20px
+}
+img {
+    max-width:100%;
+    width:100%
+}
+.col-sm-4 img {
+    height:300px;
+}
+.title {
+    font-family: 'Lobster', cursive;
+}
+.actions {
+    /* margin-right: 10%; */
+}
+.icono {
+    /* margin-left: 10%; */
+    font-size: 16px;
+}
+.img-insta {
+    width:30px;
+    height: 30px;
+}
+.icon-dropdown {
+    font-size: 15.px;
+}
+.tuerca {
+    width:30px;
+    height: 20px;
+}
